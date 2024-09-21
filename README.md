@@ -35,25 +35,14 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS Variables
+- SCSS
+- Pug
 - Flexbox
 - Mobile-first workflow
-- [Normalize.css](https://necolas.github.io/normalize.css/) - CSS Library
 
 ### What I learned
 
-The font in the desktop version is slightly different than in the design, but I prefer it this way. By using rem units and adjusting the base font size variable, I was able to maintain the same font proportions.
-
-```@media screen and (min-width: 500px) {
-  :root {
-    --font-size: 19.1px;
-  }
-
-  .card {
-    max-width: 336px;
-  }
-}
-```
+How to use clamp and calc
 
 ## Author
 

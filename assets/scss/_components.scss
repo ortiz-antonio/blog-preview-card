@@ -1,0 +1,89 @@
+@import 'base';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $space-500;
+  max-inline-size: clamp(
+    20.4375rem,
+    calc(20.4375rem + (24 - 20.4375) * ((100vw - 29.9rem) / (30 - 29.9))),
+    24rem
+  );
+  padding: $space-500;
+  background-color: $color-secondary;
+  border-radius: 20px;
+  box-shadow: 10px 10px $color-gray-950;
+
+  &__img {
+    height: 12.5rem;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-300;
+    justify-content: space-around;
+
+    &--tag {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 5px 10px;
+      background-color: $color-primary;
+      border-radius: 4px;
+      @extend %font-text3-bold;
+    }
+
+    &--date {
+      @extend %font-text3;
+    }
+
+    &--title {
+      @extend %font-title;
+      &--link {
+        color: $color-gray-950;
+        text-decoration: none;
+      }
+      &--link:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  &__description {
+    color: $color-gray-500;
+    @extend %font-text3;
+  }
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    &--author {
+      @extend %font-text2;
+    }
+
+    &--avatar {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.footer {
+  margin-top: $space-500;
+}
+
+.attribution {
+  margin-inline: $space-300;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+
+    &--fm,
+    &--ortiz {
+      color: $color-gray-950;
+    }
+  }
+}

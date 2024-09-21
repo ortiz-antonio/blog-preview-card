@@ -1,0 +1,148 @@
+@font-face {
+  font-family: Figtree;
+  src: url(Figtree-VariableFont_wght.ttf);
+}
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+@font-face {
+  font-family: Figtree;
+  src: url(Figtree-VariableFont_wght.ttf);
+}
+.card__header--title {
+  letter-spacing: 0;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.card__footer--author {
+  letter-spacing: 0;
+  font-size: 0.9375em;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.card__description,
+.card__header--date {
+  letter-spacing: 0;
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.card__header--tag {
+  letter-spacing: 0;
+  font-size: 0.875em;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-inline-size: clamp(20.4375rem, 3562.5vw - 1044.75rem, 24rem);
+  padding: 1.5rem;
+  display: flex;
+  box-shadow: 10px 10px #121212;
+}
+.card__img {
+  object-fit: cover;
+  border-radius: 10px;
+  height: 12.5rem;
+}
+.card__header {
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.75rem;
+  display: flex;
+}
+.card__header--tag {
+  background-color: #f4d04e;
+  border-radius: 4px;
+  align-self: flex-start;
+  padding: 5px 10px;
+  display: inline-block;
+}
+.card__header--title--link {
+  color: #121212;
+  text-decoration: none;
+}
+.card__header--title--link:hover {
+  color: #f4d04e;
+}
+.card__description {
+  color: #6b6b6b;
+}
+.card__footer {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+.card__footer--avatar {
+  width: 32px;
+  height: 32px;
+}
+.footer {
+  margin-top: 1.5rem;
+}
+.attribution {
+  margin-inline: 0.75rem;
+}
+.attribution__content {
+  flex-direction: row;
+  gap: 1em;
+  display: flex;
+}
+.attribution__content--fm,
+.attribution__content--ortiz {
+  color: #121212;
+}
+body {
+  background-color: #f4d04e;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  font-family: Figtree, system-ui;
+  display: flex;
+}
