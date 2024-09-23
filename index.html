@@ -12,56 +12,58 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    <main>
-      <article class="card">
-        <img
-          class="card__img"
-          id="cover"
-          src="illustration-article.svg"
-          alt="html tag"
-        />
-        <header class="card__header">
-          <span class="card__header--tag">Learning</span>
-          <h2 class="card__header--date">Published 21 Dec 2023</h2>
-          <h1 class="card__header--title">
-            <a class="card__header--title--link" href="#"
-              >HTML & CSS foundations</a
+    <div class="container">
+      <main>
+        <article class="card">
+          <img
+            class="card__img"
+            id="cover"
+            src="illustration-article.svg"
+            alt="html tag"
+          />
+          <div class="card__header">
+            <span class="card__header--tag">Learning</span>
+            <h2 class="card__header--date">Published 21 Dec 2023</h2>
+            <h1 class="card__header--title">
+              <a class="card__header--title--link" href="#"
+                >HTML & CSS foundations</a
+              >
+            </h1>
+            <p class="card__description">
+              These languages are the backbone of every website, defining
+              structure, content, and presentation.
+            </p>
+            <div class="card__footer">
+              <img
+                class="card__footer--avatar"
+                src="image-avatar.webp"
+                alt="Greg Hooper avatar"
+              />
+              <h2 class="card__footer--author">Greg Hooper</h2>
+            </div>
+          </div>
+        </article>
+      </main>
+      <footer class="footer">
+        <section class="attribution">
+          <p class="attribution__content">
+            <span
+              >Challenge by
+              <a
+                class="attribution__content--fm"
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor.</a
+              ></span
+            ><span
+              >Coded by
+              <a class="attribution__content--ortiz" href="https://ortiz.studio"
+                >Antonio Ortiz</a
+              ></span
             >
-          </h1>
-          <p class="card__description">
-            These languages are the backbone of every website, defining
-            structure, content, and presentation.
           </p>
-          <footer class="card__footer">
-            <img
-              class="card__footer--avatar"
-              src="image-avatar.webp"
-              alt="Greg Hooper avatar"
-            />
-            <h2 class="card__footer--author">Greg Hooper</h2>
-          </footer>
-        </header>
-      </article>
-    </main>
+        </section>
+      </footer>
+    </div>
   </body>
-  <footer class="footer">
-    <section class="attribution">
-      <p class="attribution__content">
-        <span
-          >Challenge by
-          <a
-            class="attribution__content--fm"
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-            >Frontend Mentor.</a
-          ></span
-        ><span
-          >Coded by
-          <a class="attribution__content--ortiz" href="https://ortiz.studio"
-            >Antonio Ortiz</a
-          ></span
-        >
-      </p>
-    </section>
-  </footer>
 </html>
