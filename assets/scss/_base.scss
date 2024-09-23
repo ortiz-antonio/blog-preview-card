@@ -1,6 +1,5 @@
 // Import math functions from Sass library (assuming you have it installed)
 @use 'sass:math';
-@import 'reset';
 
 @font-face {
   font-family: Figtree;
@@ -26,8 +25,6 @@ $base-font-size: 16; //in px
 
 // Define functions for converting pixel values to em and rem units
 @function pxToEm($value) {
-  @debug $value;
-  @debug $base-font-size;
   $emValue: math.div($value, $base-font-size) + em;
   @return $emValue;
 }
@@ -51,7 +48,7 @@ $base-font-size: 16; //in px
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  min-height: 100svh;
 }
 
 %font-title {

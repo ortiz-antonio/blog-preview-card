@@ -1,4 +1,5 @@
 // center all page
-body {
+
+.container {
   @include center-content;
 }
