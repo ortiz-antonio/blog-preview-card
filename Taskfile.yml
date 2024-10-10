@@ -69,7 +69,6 @@ tasks:
   lint:
     sources:
       - _includes/src/scss/**/*.scss
-      - _includes/src/scss/*.scss
       - _includes/src/partials/**/*.scss
 
     cmds:
