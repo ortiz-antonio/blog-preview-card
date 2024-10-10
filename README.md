@@ -27,7 +27,6 @@ Users should be able to:
 
 ### Links
 
-- Parent Project: [https://github.com/ortiz-antonio/frontend-mentor](https://github.com/ortiz-antonio/frontend-mentor)
 - Solution URL: [https://github.com/ortiz-antonio/blog-preview-card](https://github.com/ortiz-antonio/blog-preview-card)
 - Live Site URL: [https://ortiz-antonio.github.io/blog-preview-card/](https://ortiz-antonio.github.io/blog-preview-card/)
 
@@ -37,13 +36,14 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - SCSS
-- Pug
+- nunjucks
 - Flexbox
 - Mobile-first workflow
 
 ### What I learned
 
-How to use clamp and calc
+In this proyect, I tried to implement better my sass setup, also first I used clamp for the container width and for the fonts on tag, date, title and description, So I changed to a media query, It makes more sense because I'm using the same breakpoint and only I change one value, not using different transition values on a clamp function.
+Also I run some accesibility test.
 
 ## Author
 

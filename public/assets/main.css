@@ -1,0 +1,257 @@
+:root {
+  --container-min-width: 20.4375rem;
+  --container-max-width: 24rem;
+  --space-500: 1.5rem;
+  --space-400: 1rem;
+  --space-300: 0.75rem;
+  --space-200: 0.375rem;
+  --space-100: 0.25rem;
+  --font-family: figtree, sans-serif;
+  --primary: hsl(0deg 0% 7%);
+  --accent: hsl(0deg 0% 42%);
+  --background-accent: hsl(47deg 88% 63%);
+  --background: hsl(0deg 0% 100%);
+  --title-font-size: 1.25rem;
+  --title-font-size-desktop: 1.5rem;
+  --title-weight: 800;
+  --title-line-height: 1.5;
+  --title-letter-spacing: 0;
+  --body-font-size: 0.875rem;
+  --body-font-size-desktop: 1rem;
+  --body-weight: 500;
+  --body-line-height: 1.5;
+  --body-letter-spacing: 0;
+  --tag-font-size: 0.75rem;
+  --tag-font-size-desktop: 0.875rem;
+  --tag-weight: 500;
+  --tag-line-height: 1.5;
+  --tag-letter-spacing: 0;
+  --tag-b-font-size: 0.75rem;
+  --tag-b-font-size-desktop: 0.875rem;
+  --tag-b-weight: 800;
+  --tag-b-line-height: 1.5;
+  --tag-b-letter-spacing: 0;
+  --author-font-size: 0.875rem;
+  --author-weight: 800;
+  --author-line-height: 1.5;
+  --author-letter-spacing: 0;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+/* stylelint-disable */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* stylelint-enable */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@font-face {
+  font-family: FigTree;
+  font-display: swap;
+  src: url("fonts/Figtree-VariableFont_wght.ttf");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  font-family: var(--font-family);
+  background-color: var(--background-accent);
+  padding: 2px;
+}
+
+.footer {
+  margin-top: var(--space-500);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-500);
+  max-inline-size: var(--container-min-width);
+  padding: var(--space-500);
+  background-color: var(--background);
+  border-radius: 20px;
+  box-shadow: 10px 10px var(--primary);
+}
+
+.card__img {
+  height: 12.5rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+  justify-content: space-around;
+}
+
+.card__header--tag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 5px 10px;
+  background-color: var(--background-accent);
+  border-radius: 4px;
+  font-size: var(--tag-b-font-size);
+  font-weight: var(--tag-b-weight);
+  line-height: var(--tag-b-line-height);
+  letter-spacing: var(--tag-b-letter-spacing);
+}
+
+.card__header--date {
+  font-size: var(--tag-font-size);
+  font-weight: var(--tag-weight);
+  line-height: var(--tag-line-height);
+  letter-spacing: var(--tag-letter-spacing);
+}
+
+.card__header--title {
+  font-size: var(--title-font-size);
+  font-weight: var(--title-weight);
+  line-height: var(--title-line-height);
+  letter-spacing: var(--title-letter-spacing);
+}
+
+.card__header--title--link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.card__header--title--link:is(:hover, :focus) {
+  color: var(--background-accent);
+}
+
+.card__description {
+  color: var(--accent);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-letter-spacing);
+}
+
+.card__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.card__footer--author {
+  font-size: var(--author-font-size);
+  font-weight: var(--author-weight);
+  line-height: var(--author-line-height);
+  letter-spacing: var(--author-letter-spacing);
+}
+
+.card__footer--avatar {
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (width >= 37.5rem) {
+  .card {
+    max-inline-size: var(--container-max-width);
+  }
+
+  .card__header--title {
+    font-size: var(--title-font-size-desktop);
+  }
+
+  .card__header--tag {
+    font-size: var(--tag-font-size-desktop);
+  }
+
+  .card__description {
+    font-size: var(--body-font-size-desktop);
+  }
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution__content--fm,
+.attribution__content--ortiz {
+  color: var(--primary);
+}

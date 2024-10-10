@@ -1,0 +1,20 @@
+{% macro blogCard(content) %}
+<article class="card">
+  <img id="cover" class="card__img" src="assets/images/illustration-article.svg" alt="" />
+
+  <div class="card__header">
+    <span class="card__header--tag">{{content.tag}}</span>
+    <h2 class="card__header--date">{{content.date}}</h2>
+    <h1 class="card__header--title">
+      <a class="card__header--title--link" href="#">{{content.title}}</a>
+    </h1>
+
+    <p class="card__description">{{content.description}}</p>
+
+    <div class="card__footer">
+      <img class="card__footer--avatar" src="{{content.avatarImg}}" alt="{{content.author}} avatar" />
+      <h2 class="card__footer--author">{{content.author}}</h2>
+    </div>
+  </div>
+</article>
+{% endmacro %}

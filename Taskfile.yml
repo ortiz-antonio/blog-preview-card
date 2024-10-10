@@ -16,7 +16,7 @@ tasks:
 
   dev:sass:
     cmds:
-      - pnpm sass --watch _includes/src/scss:public/assets --no-source-map --watch _includes/src/partials
+      - pnpm sass --watch _includes/src/scss:public/assets --no-source-map --watch _includes/src/partials:public/assets
     daemon: true
     silent: false
 
@@ -40,8 +40,9 @@ tasks:
 
   build:
     sources:
-      - _includes
+      - _includes/**/*.njk
       - index.njk
+      - _includes/src/**/*.{scss,njk}
 
     cmds:
       - task: build:clean
@@ -59,9 +60,9 @@ tasks:
 
   format:
     sources:
-      - _includes
-      - public
+      - _includes/**/*.njk
       - index.njk
+      - _includes/src/**/*.{scss,njk}
     cmds:
       - prettier ./ --write
 

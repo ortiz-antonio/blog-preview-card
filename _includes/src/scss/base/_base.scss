@@ -1,0 +1,28 @@
+@use "../theme/theme";
+@use "../theme/typography";
+
+@mixin center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+@font-face {
+  font-family: FigTree;
+  font-display: swap;
+  src: url("fonts/Figtree-VariableFont_wght.ttf");
+}
+
+.container {
+  @include center-content;
+
+  font-family: #{var(--font-family)};
+  background-color: theme.color("background-accent");
+  padding: 2px;
+}
+
+.footer {
+  margin-top: #{var(--space-500)};
+}

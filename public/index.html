@@ -1,42 +1,51 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Frontend Mentor | Blog preview card</title>
-    <meta charset="utf-8" />
+    <title>Frontend Mentor | Blog Preview card</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="frontend mentor blog preview card solution by ortiz"
+      content="Frontend mentor qr component solution by ortiz"
     />
-    <link rel="icon" href="favicon-32x32.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="icon"
+      href="assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/main.css" />
   </head>
   <body>
     <div class="container">
       <main>
+        <h1 class="visually-hidden">Blog Preview card</h1>
+
         <article class="card">
           <img
-            class="card__img"
             id="cover"
-            src="illustration-article.svg"
-            alt="html tag"
+            class="card__img"
+            src="assets/images/illustration-article.svg"
+            alt=""
           />
+
           <div class="card__header">
             <span class="card__header--tag">Learning</span>
             <h2 class="card__header--date">Published 21 Dec 2023</h2>
             <h1 class="card__header--title">
               <a class="card__header--title--link" href="#"
-                >HTML & CSS foundations</a
+                >HTML &amp; CSS foundations</a
               >
             </h1>
+
             <p class="card__description">
               These languages are the backbone of every website, defining
               structure, content, and presentation.
             </p>
+
             <div class="card__footer">
               <img
                 class="card__footer--avatar"
-                src="image-avatar.webp"
+                src="assets/images/image-avatar.webp"
                 alt="Greg Hooper avatar"
               />
               <h2 class="card__footer--author">Greg Hooper</h2>
@@ -45,7 +54,7 @@
         </article>
       </main>
       <footer class="footer">
-        <section class="attribution">
+        <div class="attribution">
           <p class="attribution__content">
             <span
               >Challenge by
@@ -54,15 +63,16 @@
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor.</a
-              ></span
-            ><span
-              >Coded by
+              >
+            </span>
+            <span>
+              Coded by
               <a class="attribution__content--ortiz" href="https://ortiz.studio"
                 >Antonio Ortiz</a
-              ></span
-            >
+              >
+            </span>
           </p>
-        </section>
+        </div>
       </footer>
     </div>
   </body>

@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Blog Preview card
+---
+
+{% import "blog-preview-card/blog-preview-card.njk" as macro %}
+
+{{ 
+    macro.blogCard({
+        tag: "Learning",
+        date: "Published 21 Dec 2023",
+        title: "HTML & CSS foundations",
+        description: "These languages are the backbone of every website, defining structure, content, and presentation.",
+        avatarImg: "assets/images/image-avatar.webp",
+        author: "Greg Hooper"
+    }) 
+}}

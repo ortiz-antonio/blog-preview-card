@@ -1,0 +1,95 @@
+@use "../../scss/utils/variables";
+@use "../../scss/utils/functions";
+@use "../../scss/theme/theme";
+@use "../../scss/theme/typography";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: #{var(--space-500)};
+  max-inline-size: var(--container-min-width);
+  padding: #{var(--space-500)};
+  background-color: theme.color("background");
+  border-radius: 20px;
+  box-shadow: 10px 10px theme.color("primary");
+}
+
+.card__img {
+  height: #{functions.px-to-rem(200px)};
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+  justify-content: space-around;
+}
+
+.card__header--tag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 5px 10px;
+  background-color: theme.color("background-accent");
+  border-radius: 4px;
+
+  @include typography.size("tag-bold");
+}
+
+.card__header--date {
+  @include typography.size("tag");
+}
+
+.card__header--title {
+  @include typography.size("title");
+}
+
+.card__header--title--link {
+  color: theme.color("primary");
+  text-decoration: none;
+
+  &:is(:hover, :focus) {
+    color: theme.color("background-accent");
+  }
+}
+
+.card__description {
+  color: theme.color("accent");
+
+  @include typography.size("body");
+}
+
+.card__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.card__footer--author {
+  @include typography.size("author");
+}
+
+.card__footer--avatar {
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (min-width: #{variables.$container-breakpoint}) {
+  .card {
+    max-inline-size: var(--container-max-width);
+  }
+
+  .card__header--title {
+    font-size: var(--title-font-size-desktop);
+  }
+
+  .card__header--tag {
+    font-size: var(--tag-font-size-desktop);
+  }
+
+  .card__description {
+    font-size: var(--body-font-size-desktop);
+  }
+}
