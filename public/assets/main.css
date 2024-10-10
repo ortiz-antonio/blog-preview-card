@@ -7,10 +7,10 @@
   --space-200: 0.375rem;
   --space-100: 0.25rem;
   --font-family: figtree, sans-serif;
-  --primary: hsl(0deg 0% 7%);
-  --accent: hsl(0deg 0% 42%);
-  --background-accent: hsl(47deg 88% 63%);
-  --background: hsl(0deg 0% 100%);
+  --primary: hsl(0, 0%, 7%);
+  --accent: hsl(0, 0%, 42%);
+  --background-accent: hsl(47, 88%, 63%);
+  --background: hsl(0, 0%, 100%);
   --title-font-size: 1.25rem;
   --title-font-size-desktop: 1.5rem;
   --title-weight: 800;
@@ -123,7 +123,6 @@ h6 {
   font-display: swap;
   src: url("fonts/Figtree-VariableFont_wght.ttf");
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -193,7 +192,6 @@ h6 {
   color: var(--primary);
   text-decoration: none;
 }
-
 .card__header--title--link:is(:hover, :focus) {
   color: var(--background-accent);
 }
@@ -224,24 +222,20 @@ h6 {
   height: 32px;
 }
 
-@media screen and (width >= 37.5rem) {
+@media screen and (min-width: 37.5rem) {
   .card {
     max-inline-size: var(--container-max-width);
   }
-
   .card__header--title {
     font-size: var(--title-font-size-desktop);
   }
-
   .card__header--tag {
     font-size: var(--tag-font-size-desktop);
   }
-
   .card__description {
     font-size: var(--body-font-size-desktop);
   }
 }
-
 .attribution {
   text-align: center;
 }
