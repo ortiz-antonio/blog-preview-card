@@ -7,7 +7,13 @@
   display: flex;
   flex-direction: column;
   gap: #{var(--space-500)};
-  max-inline-size: var(--container-mobile-width);
+  max-inline-size: functions.responsive-clamp(
+    var(--container-mobile),
+    var(--container-mobile-unitless),
+    var(--container-desktop-unitless),
+    var(--container-breakpoint),
+    var(--container-desktop)
+  );
   padding: #{var(--space-500)};
   background-color: theme.color("background");
   border-radius: 20px;
@@ -15,6 +21,7 @@
 }
 
 .card__img {
+  aspect-ratio: 336/200;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -42,6 +49,14 @@
 
 .card__header--title {
   @include typography.size("title");
+
+  font-size: functions.responsive-clamp(
+    var(--title-font-size),
+    var(--container-mobile-unitless),
+    var(--container-desktop-unitless),
+    var(--container-breakpoint),
+    var(--title-font-size-desktop)
+  );
 }
 
 .card__header--title--link {
@@ -73,22 +88,4 @@
 .card__footer--avatar {
   width: 32px;
   height: 32px;
-}
-
-@media screen and (min-width: #{variables.$container-breakpoint}) {
-  .card {
-    max-inline-size: var(--container-desktop-width);
-  }
-
-  .card__header--title {
-    font-size: var(--title-font-size-desktop);
-  }
-
-  .card__header--tag {
-    font-size: var(--tag-font-size-desktop);
-  }
-
-  .card__description {
-    font-size: var(--body-font-size-desktop);
-  }
 }
