@@ -4,17 +4,19 @@
 
   <div class="card__header">
     <span class="card__header--tag">{{content.tag}}</span>
-    <h2 class="card__header--date">{{content.date}}</h2>
-    <h3 class="card__header--title">
+    <p class="card__header--date">
+      <time datetime="2023-21-12">{{content.date}}</time>
+    </p>
+    <h2 class="card__header--title">
       <a class="card__header--title--link" href="#">{{content.title}}</a>
-    </h3>
+    </h2>
+  </div>
 
     <p class="card__description">{{content.description}}</p>
 
     <div class="card__footer">
-      <img class="card__footer--avatar" src="{{content.avatarImg}}" alt="{{content.author}} avatar" />
+      <img class="card__footer--avatar" src="{{content.avatarImg}}" alt="" />
       <p class="card__footer--author">{{content.author}}</p>
     </div>
-  </div>
 </article>
 {% endmacro %}

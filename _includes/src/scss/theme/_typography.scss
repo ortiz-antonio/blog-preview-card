@@ -10,7 +10,7 @@ $settings: (
     letter-spacing: #{var(--title-letter-spacing)},
   ),
   "body": (
-    // font-size: #{var(--body-font-size)},
+    font-size: #{var(--body-font-size)},
     weight: #{var(--body-weight)},
     line-height: #{var(--body-line-height)},
     letter-spacing: #{var(--body-letter-spacing)},
